@@ -1,0 +1,24 @@
+name: Validate tooling and normalized formats
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.12'
+      - name: Verify normalizers and acquisition/publication boundaries
+        run: |
+          python -m unittest discover -s tests/normalizers -v
+          python -m unittest discover -s tests/pipeline -v
+          python -m compileall -q src tools
+          python -c "import sys,pathlib,json; sys.path.insert(0,'src'); from floe_electronics.sources import load_policy,verify_lock; verify_lock(load_policy(pathlib.Path('upstreams.json')),json.load(open('upstreams.lock.json')))"

@@ -1,0 +1,959 @@
+{
+  "modelSources": [
+    {
+      "id": "kicad-packages3d",
+      "licenseSourceID": "kicad-footprints",
+      "provider": "gitlab",
+      "repository": "https://gitlab.com/kicad/libraries/kicad-packages3D.git",
+      "versionFrom": "kicad-symbols"
+    }
+  ],
+  "schemaVersion": 1,
+  "scope": "2D source data only; 3D references retained, model files excluded",
+  "sources": [
+    {
+      "enabled": true,
+      "format": "kicad",
+      "id": "kicad-symbols",
+      "license": {
+        "approvedTextSHA256": "22ddb77b9a023c98895d99f61ce26705fc9fcd0bd38bf30cfa67401ff9a5d7f0",
+        "attribution": "KiCad library contributors",
+        "evidencePath": "LICENSE.md",
+        "extract": "full",
+        "id": "CC-BY-SA-4.0 WITH LicenseRef-KiCad-design-exception",
+        "url": "https://www.kicad.org/libraries/license/"
+      },
+      "releaseGroup": "kicad-stable",
+      "repository": "https://gitlab.com/kicad/libraries/kicad-symbols.git",
+      "tracking": {
+        "kind": "stable-tag",
+        "major": 10
+      }
+    },
+    {
+      "enabled": true,
+      "format": "kicad",
+      "id": "kicad-footprints",
+      "license": {
+        "approvedTextSHA256": "22ddb77b9a023c98895d99f61ce26705fc9fcd0bd38bf30cfa67401ff9a5d7f0",
+        "attribution": "KiCad library contributors",
+        "evidencePath": "LICENSE.md",
+        "extract": "full",
+        "id": "CC-BY-SA-4.0 WITH LicenseRef-KiCad-design-exception",
+        "url": "https://www.kicad.org/libraries/license/"
+      },
+      "releaseGroup": "kicad-stable",
+      "repository": "https://gitlab.com/kicad/libraries/kicad-footprints.git",
+      "tracking": {
+        "kind": "stable-tag",
+        "major": 10
+      }
+    },
+    {
+      "enabled": true,
+      "format": "kicad",
+      "id": "sparkfun",
+      "license": {
+        "approvedTextSHA256": "db7a70bb8abf50f75a097f5ba541fadeeb1284aa467c50d8ec9af18b21172490",
+        "attribution": "SparkFun Electronics and upstream contributors",
+        "evidencePath": "README.md",
+        "extract": "sparkfun-license-section",
+        "id": "CC-BY-4.0",
+        "url": "https://github.com/sparkfun/SparkFun-KiCad-Libraries#license"
+      },
+      "repository": "https://github.com/sparkfun/SparkFun-KiCad-Libraries.git",
+      "tracking": {
+        "kind": "stable-tag"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "kicad",
+      "id": "espressif",
+      "license": {
+        "approvedTextSHA256": "6eb43c2548ac6714db47ccbd62354bd194e918f606b071a5e9893680b941d75a",
+        "attribution": "Espressif Systems and upstream contributors",
+        "evidencePath": "LICENSE.md",
+        "extract": "full",
+        "id": "CC-BY-SA-4.0 WITH LicenseRef-KiCad-design-exception",
+        "url": "https://github.com/espressif/kicad-libraries/blob/main/LICENSE.md"
+      },
+      "repository": "https://github.com/espressif/kicad-libraries.git",
+      "tracking": {
+        "kind": "stable-tag",
+        "major": 3
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-apa",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (APA)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/APA.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/APA.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-avx",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (AVX)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/AVX.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/AVX.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-adafruit",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Adafruit)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Adafruit.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Adafruit.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-aithinker",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (AiThinker)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/AiThinker.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/AiThinker.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-arduino",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Arduino)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Arduino.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Arduino.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-ck",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (CK)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/CK.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/CK.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-cnc-tech",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (CNC_Tech)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/CNC_Tech.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/CNC_Tech.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-cinch-connectivity-solutions",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Cinch_Connectivity_Solutions)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Cinch_Connectivity_Solutions.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Cinch_Connectivity_Solutions.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-cree",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Cree)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Cree.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Cree.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-diodes-incorporated",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Diodes_Incorporated)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Diodes_Incorporated.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Diodes_Incorporated.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-espressif",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Espressif)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Espressif.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Espressif.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-ftdi",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (FTDI)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/FTDI.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/FTDI.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-framework-computer",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Framework_Computer)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Framework_Computer.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Framework_Computer.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-gct",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (GCT)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/GCT.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/GCT.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-hoperf",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (HopeRF)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/HopeRF.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/HopeRF.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-infineon",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Infineon)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Infineon.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Infineon.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-isabellenhuette",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Isabellenhuette)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Isabellenhuette.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Isabellenhuette.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-jst",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (JST)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/JST.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/JST.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-kemet",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (KEMET)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/KEMET.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/KEMET.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-keystone",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Keystone)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Keystone.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Keystone.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-librepcb-base",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (LibrePCB_Base)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/LibrePCB_Base.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/LibrePCB_Base.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-librepcb-connectors",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (LibrePCB_Connectors)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/LibrePCB_Connectors.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/LibrePCB_Connectors.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-librepcb-ics",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (LibrePCB_ICs)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/LibrePCB_ICs.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/LibrePCB_ICs.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-littelfuse",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Littelfuse)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Littelfuse.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Littelfuse.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-lolin",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Lolin)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Lolin.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Lolin.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-luminus",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Luminus)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Luminus.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Luminus.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-m5stack",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (M5Stack)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/M5Stack.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/M5Stack.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-maxim",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Maxim)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Maxim.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Maxim.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-microchip",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Microchip)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Microchip.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Microchip.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-molex",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Molex)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Molex.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Molex.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-murata",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Murata)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Murata.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Murata.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-nxp",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (NXP)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/NXP.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/NXP.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-nordic",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Nordic)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Nordic.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Nordic.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-osram",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (OSRAM)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/OSRAM.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/OSRAM.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-panasonic",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Panasonic)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Panasonic.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Panasonic.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-phoenix",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Phoenix)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Phoenix.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Phoenix.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-pulse-electronics",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Pulse_Electronics)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Pulse_Electronics.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Pulse_Electronics.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-raspberrypi",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (RaspberryPi)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/RaspberryPi.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/RaspberryPi.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-stmicroelectronics",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (STMicroelectronics)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/STMicroelectronics.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/STMicroelectronics.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-samesky",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (SameSky)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/SameSky.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/SameSky.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-sensirion",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Sensirion)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Sensirion.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Sensirion.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-tag-connect",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Tag_Connect)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Tag_Connect.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Tag_Connect.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-texas-instruments",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Texas_Instruments)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Texas_Instruments.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Texas_Instruments.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-toshiba",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Toshiba)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Toshiba.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Toshiba.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-tubes",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Tubes)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Tubes.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Tubes.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-vishay",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Vishay)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Vishay.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Vishay.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-weact",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (WeAct)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/WeAct.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/WeAct.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": true,
+      "format": "librepcb",
+      "id": "librepcb-winbond",
+      "license": {
+        "approvedTextSHA256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
+        "attribution": "LibrePCB-Libraries contributors (Winbond)",
+        "evidencePath": "LICENSE.txt",
+        "extract": "full",
+        "id": "CC0-1.0",
+        "url": "https://github.com/LibrePCB-Libraries/Winbond.lplib/blob/master/LICENSE.txt"
+      },
+      "repository": "https://github.com/LibrePCB-Libraries/Winbond.lplib.git",
+      "tracking": {
+        "kind": "branch",
+        "name": "master"
+      }
+    },
+    {
+      "enabled": false,
+      "format": "kicad",
+      "id": "wurth",
+      "reason": "Custom non-transferable/non-sublicensable license; no blanket original-library redistribution grant established. Retained as a discovery source, excluded from automated redistribution.",
+      "repository": "https://github.com/WurthElektronik/KiCad-Library.git"
+    }
+  ]
+}

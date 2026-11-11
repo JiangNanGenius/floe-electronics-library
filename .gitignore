@@ -1,0 +1,8 @@
+.cache/
+dist/
+release/
+candidate.lock.json
+__pycache__/
+*.pyc
+*.egg-info/
+.DS_Store
