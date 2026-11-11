@@ -1,0 +1,337 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://floe.dev/schemas/normalized-record.schema.json",
+  "title": "Floe normalized 2D electronics library record",
+  "description": "One normalized symbol, footprint or component record produced by floe_electronics.normalizers.normalize(). This is an exchange/catalog schema for a future native adapter; it is not a native runtime package format. All geometry is in millimeters. 3D models are referenced as metadata only and never included as bytes.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "kind",
+    "name",
+    "library",
+    "format",
+    "units",
+    "source",
+    "identifiers",
+    "status",
+    "issues",
+    "properties"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^floe:electronics:",
+      "description": "Opaque stable record id: floe:electronics:<source>:<kind>:<library-slug>:<name-slug>~<discriminator>. The discriminator is the intrinsic LibrePCB UUID where present, otherwise a stable digest of the exact (source path, exact unsanitized element name) identity. Slug segments are readable only; the discriminator makes ids collision-free and independent of file/document iteration order, so ids do not shift when new source files or duplicate names are inserted. Exact duplicate source identities are flagged duplicate-source-identity or duplicate-id and remain reviewRequired."
+    },
+    "kind": {
+      "enum": [
+        "symbol",
+        "footprint",
+        "component"
+      ],
+      "description": "LibrePCB devices are emitted as component records with properties.role == 'device'."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "library": {
+      "type": "string",
+      "minLength": 1
+    },
+    "format": {
+      "enum": [
+        "kicad",
+        "librepcb"
+      ]
+    },
+    "units": {
+      "const": "mm"
+    },
+    "source": {
+      "$ref": "#/$defs/sourceRef"
+    },
+    "identifiers": {
+      "type": "object",
+      "description": "Source identities (KiCad symbol/footprint name, LibrePCB UUID).",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "uuid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "status": {
+      "enum": [
+        "converted",
+        "reviewRequired",
+        "unsupported"
+      ],
+      "description": "converted = fully normalized known content; reviewRequired = conversion succeeded but contains features needing review; unsupported = not usable as-is (parse failure, invalid root, cyclic/unresolved inheritance)."
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Machine-readable issue codes, e.g. parse-error:..., unresolved-dependency:<role>:<uuid>, cyclic-inheritance, duplicate-id, unhandled-tag, custom-pad-geometry."
+    },
+    "properties": {
+      "type": "object",
+      "description": "Source metadata (properties, flags, units count, device role).",
+      "additionalProperties": true
+    },
+    "dependencies": {
+      "type": "object",
+      "description": "Source dependency identities by role (extends, categories, symbols, components, packages, signals, packagePads, padstacks).",
+      "additionalProperties": {
+        "$ref": "#/$defs/dependencyList"
+      }
+    },
+    "references": {
+      "type": "object",
+      "description": "Structured cross-entity references copied from the source (LibrePCB symbol variants/gates, device pin-pad map)."
+    },
+    "modelReferences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/modelReference"
+      },
+      "description": "3D model references only; no model bytes are ever included."
+    },
+    "pins": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Symbol pins / component signals with positionMm, rotationDeg, lengthMm and source identity."
+    },
+    "pads": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Footprint pads with positionMm, rotationDeg, sizeMm, layers, drill, net and preserved custom geometry."
+    },
+    "footprints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "LibrePCB package footprints (pads, graphics, model references)."
+    },
+    "graphics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/graphic"
+      },
+      "description": "Semantic 2D graphics (lines, rects, circles, arcs, polylines, bezier curves, text)."
+    },
+    "unhandled": {
+      "type": "array",
+      "description": "Verbatim JSON of source nodes this normalizer does not semantically decode; never dropped."
+    },
+    "raw": {
+      "type": "object",
+      "description": "Verbatim JSON of the complete source expression tree for the record's source element.",
+      "properties": {
+        "tag": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "items": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "sourceRef": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Path relative to the source checkout root, POSIX separators."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 of the exact original source file bytes."
+        }
+      },
+      "additionalProperties": false
+    },
+    "dependencyList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resolvedPath": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "modelReference": {
+      "type": "object",
+      "description": "Metadata-only 3D model reference. Offsets/scales/rotations are retained exactly as found in the source and are not unit-converted.",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "uuid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "array"
+        },
+        "offsetMm": {
+          "type": "array"
+        },
+        "rotationDeg": {
+          "type": "array"
+        },
+        "scale": {
+          "type": "array"
+        },
+        "unitNote": {
+          "type": "string"
+        },
+        "unhandled": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": true
+    },
+    "graphic": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "unit": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "style": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "layer": {
+          "type": "string"
+        },
+        "startMm": {
+          "type": "array"
+        },
+        "midMm": {
+          "type": "array"
+        },
+        "endMm": {
+          "type": "array"
+        },
+        "centerMm": {
+          "type": "array"
+        },
+        "positionMm": {
+          "type": "array"
+        },
+        "pointsMm": {
+          "type": "array"
+        },
+        "vertices": {
+          "type": "array"
+        },
+        "radiusMm": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "diameterMm": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "widthMm": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "heightMm": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "rotationDeg": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "stroke": {
+          "type": "object"
+        },
+        "fill": {
+          "type": "object"
+        },
+        "effects": {
+          "type": "object"
+        },
+        "issues": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -137,7 +137,7 @@ def publish(directory: Path) -> None:
     notes.write_text(f"Versioned 2D component-library exchange data: {len(catalog['sources'])} upstream libraries, {counts} records.\n\n"
                      "Includes the complete 2D download and individual upstream packages, source originals, licenses, immutable upstream pins and SHA-256 manifests. "
                      "Compatibility status is explicit per record. 3D references are retained; model binaries are excluded. "
-                     "This data format has not yet been integrated into the Floe App.\n\n"
+                     "Exchange files are separate from native Floe runtime packages; conversion status does not assert native placement or 3D rendering.\n\n"
                      f"Producer source: `{revision}`. Data: `{receipt['datasetSHA256']}`.\n")
     present = set()
     if existing:
